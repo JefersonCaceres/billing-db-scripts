@@ -25,3 +25,17 @@ CREATE TABLE billing.client_log (
         FOREIGN KEY (client_id)
         REFERENCES billing.client(id)
 );
+
+
+-- Tabla unificada para impuestos y descuentos
+
+CREATE TABLE billing_parameter (
+    id SERIAL PRIMARY KEY,
+    param_type VARCHAR(20) NOT NULL,  -- TAX | DISCOUNT
+    name VARCHAR(50) NOT NULL,
+    description VARCHAR(150),
+    value_percent NUMERIC(5,2),
+    value_amount NUMERIC(12,2),
+    min_purchase NUMERIC(12,2),
+    is_active BOOLEAN DEFAULT TRUE
+);
