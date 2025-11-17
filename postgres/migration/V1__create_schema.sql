@@ -1,0 +1,3 @@
+-- DROP SCHEMA billing;
+
+CREATE SCHEMA IF NOT EXISTS billing;
