@@ -47,3 +47,16 @@ VALUES ('DISCOUNT', 'RANGO_5', '5% para compras >= 300.000', 5.00, 300000, TRUE)
 INSERT INTO billing_parameter
 (param_type, name, description, value_percent, min_purchase, is_active)
 VALUES ('DISCOUNT', 'RANGO_10', '10% para compras >= 1.000.000', 10.00, 1000000, TRUE);
+
+
+-- Auto-generated SQL script #202511181536
+UPDATE billing.billing_parameter
+	SET description='15% de descuento',"name"='DESCUENTO_15',min_purchase=1500000
+	WHERE id=2;
+
+
+-- Auto-generated SQL script #202511181536
+UPDATE billing.billing_parameter
+	SET min_purchase=400000
+	WHERE id=3;
+
