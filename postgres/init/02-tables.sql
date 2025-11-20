@@ -29,7 +29,7 @@ CREATE TABLE billing.client_log (
 
 -- Tabla unificada para impuestos y descuentos
 
-CREATE TABLE billing_parameter (
+CREATE TABLE billing.billing_parameter (
     id SERIAL PRIMARY KEY,
     param_type VARCHAR(20) NOT NULL,  -- TAX | DISCOUNT
     name VARCHAR(50) NOT NULL,
